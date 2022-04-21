@@ -1,0 +1,31 @@
+.banner {
+    height: 70px;
+}
+.simatas {
+    height:100
+}
+
+#size {
+    border: solid red 2px;
+}
+
+h1{
+    font-family: Garamond;
+    font-size:40px;
+    color:#585858;
+}
+
+a{
+    font-family: monospace;
+     font-size:20px;
+
+
+}
+ a:visited {
+  color: green;
+
+}
+
+a:hover {
+  color: hotpink;
+}

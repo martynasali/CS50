@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+       <script>
+            function compare()
+                {
+                    let name = document.querySelector('#freeResponse').value.toLowerCase();
+                    if(name == "claws" || name == "nails")
+                    {
+                        document.querySelector("#inc").style.display = "none";
+                        document.querySelector("#cor").style.display = "inline";
+                        document.querySelector("#freeResponse").style.backgroundColor = "green";
+                    }
+                    else
+                    {
+                         document.querySelector("#cor").style.display = "none";
+                         document.querySelector("#inc").style.display = "inline";
+                         document.querySelector("#freeResponse").style.backgroundColor = "red";
+                    }
+                }
+            function answer(num)
+            {
+                if(num == 48)
+                {
+                        document.querySelector("#inco").style.display = "none";
+                        document.querySelector("#corr").style.display = "inline";
+                        document.querySelector("#three").style.backgroundColor = "green";
+                }
+                else if (num == 39)
+                {
+                         document.querySelector("#corr").style.display = "none";
+                         document.querySelector("#inco").style.display = "inline";
+                         document.querySelector("#one").style.backgroundColor = "red";
+                }
+                else if (num == 25)
+                {
+                         document.querySelector("#corr").style.display = "none";
+                         document.querySelector("#inco").style.display = "inline";
+                         document.querySelector("#two").style.backgroundColor = "red";
+                }
+                else if (num == 31)
+                {
+                         document.querySelector("#corr").style.display = "none";
+                         document.querySelector("#inco").style.display = "inline";
+                         document.querySelector("#four").style.backgroundColor = "red";
+                }
+
+            }
+
+                function listen() {
+                    document.querySelector('#freeResAnsw').addEventListener('click', compare);
+                    // document.querySelector('.section').addEventListener('click', answer);
+                }
+
+               document.addEventListener('DOMContentLoaded', listen);
+
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <div>
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is a max speed of a cat? </h3>
+                <p id="inco" class="red" >Incorrect</p><p class="green" id="corr">Correct!</p>
+                </div>
+                <button id="one" onclick="answer(39)">39 km/h</button>
+                <button id="two" onclick="answer(25)">25 km/h</button>
+                <button id="three" onclick="answer(48)">48 km/h</button>
+                <button id="four" onclick="answer(31)">31 km/h</button>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <p id="inc" class="red" >Incorrect</p><p class="green" id="cor">Correct!</p>
+                <hr>
+                <h3>When cat climbs a tree, they can't go back, head down. Thats because of direction of their _______</h3>
+                <input id="freeResponse" autocomplete="off">
+                <input id="freeResAnsw" type="submit"  value="Answer">
+                <!-- TODO: Add free response question here -->
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

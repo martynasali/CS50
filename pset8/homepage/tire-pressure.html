@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+        <title>Tire Pressure Calculator</title>
+    </head>
+    <body class="bg-light">
+        <div class="container">
+          <div class="row mt-4"></div>
+          <div class="row">
+
+            <div class="col bg-light banner">
+                <div class="simtas"></div>
+                <h1 class="mx4" >MTB Tire Pressure Calculator <button> <a href="./index.html">Back</a> </button></h1>
+
+            </div>
+
+                <div class="input-group mb-3">
+                <input name="num" type="number" id="num" class="form-control" placeholder="Enter your weight in kg" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <button onclick="calculator()" class="btn btn-outline-secondary" type="button" id="button-addon1">Calculate</button>
+
+                </div>
+                <div><h3 id="size"></h3> </div>
+
+          </div>
+
+         <strong>Use it just for MTB bikes!</strong>
+
+         <ol>
+            <li>More pressure in the rear tire</li>
+            <li>Experiment and try to figure out tire pressure for you</li>
+            <li>Factors to consider other than rider weight: how aggressive you ride & the type of terrain you’ll be hitting. </li>
+        </ol>
+
+        </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+   <script>
+
+   function calculator()
+        {
+        let num = document.getElementById('num').value;
+        num = parseInt(num)
+        if( num < 70)
+        {
+            document.getElementById('size').innerHTML = "Front: 1.5 bar. Rear: 1.6 bar. or less";
+
+        }
+        else if(num > 71 && num < 75)
+        {
+           document.getElementById('size').innerHTML = "Front: 1.7 bar. Rear: 1.9 bar.";
+        }
+        else if(num > 75 && num < 80)
+        {
+            document.getElementById('size').innerHTML = "Front: 1.9 bar. Rear: 2.1 bar.";
+        }
+        else if(num > 80 && num < 86)
+        {
+            document.getElementById('size').innerHTML = "Front: 2.0 bar. Rear: 2.2 bar.";
+        }
+        else if(num > 86 && num < 90)
+        {
+            document.getElementById('size').innerHTML = "Front: 2.1 bar. Rear: 2.3 bar.";
+        }
+        else if(num > 90 && num < 95)
+        {
+            document.getElementById('size').innerHTML = "Front: 2.1 bar. Rear: 2.4 bar.";
+        }
+        else if( num > 95)
+        {
+            document.getElementById('size').innerHTML = "2.4 bar. and more";
+        }
+        }
+
+
+
+        </script>
+    </body>
+</html>

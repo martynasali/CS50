@@ -1,0 +1,31 @@
+   //checksum sumos kintamasis
+    int sum = 0;
+//ciklas kuris turi kortelės numerio ilgį ir numerį
+    for (int i = 1; i <b + 2; i++)
+        {
+//paiima vieną skaitmenį
+        int one = a % 10;
+
+        a = (a - one) / 10;
+        printf("%i \n", one);
+
+                if ( i % 2 == 0)
+             {
+               dvig = one * 2;
+
+             }
+             else if (dvig > 9)
+              {
+                    int varke = dvig % 10;
+                    sum = sum + varke + 1;
+
+                    printf("dvigubas/desymke%i\n", varke);
+                    printf("dvigubas/desymke%i\n", sum);
+              }
+             else
+              {
+                  sum += one;
+              }
+
+                 printf("suma%i\n", sum);
+        }
